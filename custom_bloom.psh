@@ -1,0 +1,35 @@
+// Pixel Shader (custom_bloom.psh)
+#include "common_ps_fxc.h"
+
+sampler2D g_tBaseTexture : register(s0);
+float4 g_vBloomColor : register(c0);
+float g_flBloomThreshold : register(c1);
+float g_flBlurAmount : register(c2);
+
+struct PixelInput {
+    float4 vPosition : POSITION;
+    float2 vTexCoord : TEXCOORD0;
+};
+
+float4 main(PixelInput i) : COLOR {
+    // Sample the texture
+    float4 col = tex2D(g_tBaseTexture, i.vTexCoord);
+
+    // Apply threshold
+    float luminance = dot(col.rgb, float3(0.2126, 0.7152, 0.0722));
+    float threshold = g_flBloomThreshold * (1 + sin(luminance * 10));
+    col.rgb = max(col.rgb - threshold, 0);
+
+    // Apply blur
+    float4 blurredCol = tex2D(g_tBaseTexture, i.vTexCoord + float2(g_flBlurAmount, 0));
+    blurredCol.rgb += tex2D(g_tBaseTexture, i.vTexCoord - float2(g_flBlurAmount, 0)).rgb;
+    blurredCol.rgb *= 0.5;
+
+    // Apply color grading
+    blurredCol.rgb *= g_vBloomColor.rgb;
+
+    // Combine with original image
+    col.rgb += blurredCol.rgb;
+
+    return col;
+}
