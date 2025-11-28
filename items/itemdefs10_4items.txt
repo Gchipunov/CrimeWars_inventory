@@ -1,0 +1,80 @@
+{
+	"appid": 3584410,
+	"items": [{
+
+  "itemdefid": "117",
+  "Timestamp": "2025-03-04T07:16:23Z",
+  "modified": "20250304T071623Z",
+  "date_created": "20250304T071623Z",
+  "type": "item",
+  "display_type": "",
+  "name": "item_cw_doorkey",
+  "quantity": 0,
+  "description": "To get in emegency use",
+  "icon_url": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_doorkey-200x200.png",
+  "icon_url_large": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_doorkey-2048x2048.png",
+  "tradable": true,
+  "marketable": true,
+  "commodity": false,
+  "item_slot": "1",
+  "item_quality": "1"
+},
+{
+ 
+  "itemdefid": "118",
+  "Timestamp": "2025-03-04T07:16:23Z",
+  "modified": "20250304T071623Z",
+  "date_created": "20250304T071623Z",
+  "type": "item",
+  "display_type": "",
+  "name": "item_cw_quest_note",
+  "quantity": 0,
+  "description": "",
+  "icon_url": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_quest_note-200x200.png",
+  "icon_url_large": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_quest_note-2048x2048.png",
+  "tradable": true,
+  "marketable": false,
+  "commodity": false,
+  "item_slot": "1",
+  "item_quality": "1"
+},
+{
+ 
+  "itemdefid": "119",
+  "Timestamp": "2025-03-04T07:16:23Z",
+  "modified": "20250304T071623Z",
+  "date_created": "20250304T071623Z",
+  "type": "item",
+  "display_type": "",
+  "name": "item_cw_pounchbag",
+  "quantity": 0,
+  "description": "",
+  "icon_url": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_pounchbag-200x200.png",
+  "icon_url_large": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_pounchbag-2048x2048.png",
+  "tradable": true,
+  "marketable": false,
+  "commodity": false,
+  "item_slot": "1",
+  "item_quality": "1"
+},
+{
+ 
+  "itemdefid": "120",
+  "Timestamp": "2025-03-04T07:16:23Z",
+  "modified": "20250304T071623Z",
+  "date_created": "20250304T071623Z",
+  "type": "item",
+  "display_type": "",
+  "name": "item_cw_mobilephone",
+  "quantity": 0,
+  "description": "",
+  "icon_url": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_mobilephone-200x200.png",
+  "icon_url_large": "https://raw.githubusercontent.com/Gchipunov/CrimeWars_inventory/refs/heads/main/items/cw_items/item_cw_mobilephone-2048x2048.png",
+  "tradable": true,
+  "marketable": false,
+  "commodity": false,
+  "item_slot": "1",
+  "item_quality": "1"
+}]
+}
+
