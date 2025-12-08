@@ -1,0 +1,47 @@
+CrimeWars Faction Items: Concise Balance Stats (50+ Total, Updated)
+Format: Name (Rarity): Effect | CD:s E:# Dmg/HP Dur:s Rng:m Bal Notes Base: 100HP/100E (regen20/s). TTK:2-5s. Modes: TDM/BR/Zmb/Veh. RPS: Cops>Crim>Glob>Aliens>Cops.
+Cops (Tank: +Arm/-Mob)
+	•	Breaching (R): Breach door/veh | 20s 40 50spl 2r self25 | TDM obj
+	•	Pepper (C): Cone blind/slow40% | 12s 25 - 8 - | BR arrest -20Ali
+	•	SWAT Boots (E): Speed+25% obj | 30s - - 15 - | Zmb hold -jump
+	•	Tear Gas (R): Cloud choke20/s | - 15 20/s 10 5 | x2use GlobMask-
+	•	K9 (E): Dog chase/bite | 45s 60 30 - - | 2hitdie Veh pur
+	•	Cuffs (C): Bind/drag | 10s - - 12 melee | 50%dmgbrk TDM cap
+	•	Flash Baton (R): Reveal stealth | tog20/s - - - 15 | selfblind BR
+	•	Riot Foam (E): Glue immob | 25s 50 - 10 3 | Zmb root
+	•	Backup (L): Team resp | 90s 100 - - 10 | EMP-
+	•	Ballistic Mask (R): HS resist30% | eq - - - - | brk3hit all
+Criminals (Glass: +Spd/-Arm)
+	•	Shuriken (C): 3knives ric | 15s 30 25x3 - 20arc | BR flank
+	•	IED (R): Trap det | - - 80 4 vis25s | x2 TDM amb
+	•	Steroids (E): Dmg/spd+50% | 40s 50 - 10 - | overd20 Veh ram
+	•	Wire Trap (R): Slow60% | -20 - - 8 - | destr BR chk
+	•	Sawed Gren (C): Frag bounc | - - 40 - lowarc | x3 Zmb clr
+	•	Thief Glv (E): Steal item | 25s 40 - - melee | exp risk AH
+	•	Burn Bot (R): Fire trail | -20 - 15/s 12 - | wind foam-
+	•	Gang Radio (E): Ping map | 35s 30 - 10 - | noisy TDM
+	•	Escape Smoke (L): Cloud+spd20% | 50s 60 - - 8 | selfblind BR
+	•	Leather Brac (R): Melee+20% | eq - - - - | -gun10% CQC
+Globalists (Util: +Rng/-Cls)
+	•	Turret Drn (E): Auto20/s | 40s 70 - - 20 | 100hp EMP- TDM
+	•	Cloak (R): Invis slow50% | 25s 40 - 7 - | firebrk BR
+	•	Nanites (C): Heal40 ally/veh | 15s 25 - - 10 | Zmb bar
+	•	Holo Decoy (R): Fake shoot10 | -30 - 10 - - | 1hit destr
+	•	Data Spike (E): Hack ctrl | 35s 50 - 15 - | intr Veh hij
+	•	Pulse Scan (C): Wallhck | 20s 20 - 8 30 | stat TDM
+	•	Shield Drn (L): Block50% orb | 60s 80 - 120s - | Ali pierc
+	•	Gas Drn (E): Pois10/s | 30s 45 - - - | wind mask-
+	•	Overclock (R): Fr+30% | 25s 40 - 10 - | jam5s aft
+	•	Exec Shades (R): Acc+15% mov | eq - - - - | -light Veh
+Aliens (Horde: +Reg/-Pred)
+	•	Mind Probe (E): Ctrl foe | 45s 60 - 8 15 | brk30dm
+	•	Shield Pod (R): Bubble50hp | 25s 40 - 10 - | immob TDM
+	•	Larva (L): 2min40hp | 70s 90 - - - | slow Zmb
+	•	Acid Vial (C): Melt25+slow | 12s - 25 - 20spl | x4 self
+	•	Xen Spike (R): LS melee | 10s - 30 - melee | 50%reg Crim-
+	•	Warp Dash (E): TP fwd | 20s 35 - - 15 | dizzy2 BR
+	•	Bio Swarm (E): Locust15/s | -30 - 10 - | EMP-
+	•	Regen Gland (C): HP+10/s | 25s 25 - 12 - | /2burn
+	•	Plasma Burst (E): Cone pierce | 18s 45 40 - 12 | rcoil
+	•	Hive Mask (R): Swarm+20% | eq - - - - | blur Zmb
+Bal Tips: ConVar cw_cd_scale 1.0 / cw_energy_max 100. Test: Win48-52%, K/D1:1. Drops:1-3/kill. Steam: Faction lock GetTeam(). Prior: 1/faction vNext (Breaching/IED/Spike/Larva). Chaos optimized! 🚔💀🏛️🛸
