@@ -1,0 +1,52 @@
+Additional Faction-Specific Items for CrimeWars (40 New Items) 0 5
+Expands prior lists with 10 new per faction (total 50+). Concise format: Name (Rarity): Effect. Balance Mechanics (global): 100 HP base; TTK 2-5s fair. Energy (100 max, regen 20/s). Rarity: C=cheap shop, R=common drop, E=rare AH, L=mission/legendary. Mode synergies: TDM=control, BR=escape, Zombie=swarm, Vehicles=chase. Tradeoffs: Power vs mobility/cooldown/risk (e.g., overdose). Faction RPS: Cops tank Crim glass cannons > Globalist tech > Alien horde > Cops. 8 9
+Cops (Defensive Control: +Armor, -Mobility)
+	•	Breaching Charge (R): Door/vehicle explosive breach, 50 dmg splash. Bal: 20s CD, 40 energy, 2m radius (self-dmg 25), TDM obj unlock.
+	•	Pepper Spray (C): 10m cone blind/slow 40% (8s). Bal: 12s CD, 25 energy, wind scatter -20% vs Aliens, BR arrests.
+	•	SWAT Boots (E): +25% speed on objs/vehicles (15s). Bal: 30s CD, equip slot (no jump boost), Zombie holdouts.
+	•	Tear Gas Can (R): 5m cloud choke (20 dmg/s, 10s). Bal: 1-use/stack x2, 15 energy/deploy, countered by Globalist masks.
+	•	K9 Leash (E): Summon dog (chase/bite 30 dmg). Bal: 45s CD, 60 energy, dies in 2 hits, Vehicles pursuit.
+	•	Handcuff Kit (C): Bind foe 12s (drag to obj). Bal: Melee range, 10s CD, breakable 50% on dmg, TDM caps.
+	•	Flashlight Baton (R): Reveal stealthed 15m. Bal: Toggle 20 energy/s, blinds self in dark, BR intel.
+	•	Riot Foam (E): Glue enemies (immobile 10s). Bal: 25s CD, 50 energy, splash 3m, Zombie root.
+	•	Backup Beacon (L): Team respawn 1x/round. Bal: 90s CD, 100 energy, 10m radius, countered by EMP.
+	•	Ballistic Mask (R): +30% headshot resist. *Bal: Equip (no FOV), breaks after 3 hits, all modes.
+Criminals (Aggro Mobility: +Speed, -Armor)
+	•	Shuriken Pack (C): Throw 3 knives (25 dmg ea, ricochet). Bal: 15s CD, 30 energy, 20m arc drop, BR flanks.
+	•	Remote IED (R): Detonate trap (80 dmg, 4m). Bal: 1-use x2, 25s arm time, visible/detectable, TDM ambushes.
+	•	Steroid Shot (E): +50% dmg/speed (10s). Bal: 40s CD, 50 energy, overdose 20 self-dmg post, Vehicles rams.
+	•	Wire Trap (R): Tripwire slow (60%, 8s). Bal: Deploy 20 energy, destroyable, BR chokepoints.
+	•	Sawed Grenade (C): Frag bounce (40 dmg). Bal: Stack x3, 10s fuse, low arc, Zombie clears.
+	•	Thief Gloves (E): Steal enemy item (1x/use). Bal: Melee, 25s CD, 40 energy, risk exposure, AH economy.
+	•	Burn Bottle (R): Fire trail (15 dmg/s, 12s). Bal: Throw 20 energy, wind spread, countered by foam.
+	•	Gang Radio (E): Mini-map enemy pings (10s). Bal: 35s CD, 30 energy/team, noisy alert, TDM coords.
+	•	Escape Smoke (L): 8m cloud + speed burst (20%). Bal: 50s CD, 60 energy, blinds self too, BR rotates.
+	•	Leather Bracers (R): +20% melee dmg/resist. *Bal: Equip, -10% gun acc, close-quarters.
+Corporationists/Globalists (Tech Utility: +Range, -Close)
+	•	Turret Drone (E): Auto-turret (20 dmg/s, 20m). Bal: 40s CD, 70 energy, 100 HP (EMP vuln), TDM defense.
+	•	Cloak Patch (R): Invis 7s (move slow 50%). Bal: 25s CD, 40 energy, breaks on fire/attack, BR sneaks.
+	•	Repair Nanites (C): Heal vehicle/ally 40 HP. Bal: 15s CD, 25 energy, 10m range, Zombie barricades.
+	•	Holo Decoy (R): Fake player (distract 10s). Bal: Deploy 30 energy, shoots back 10 dmg, destroy 1 hit.
+	•	Data Spike (E): Hack obj/vehicle (control 15s). Bal: 35s CD, 50 energy, interruptible, Vehicles hijack.
+	•	Pulse Scanner (C): Wallhack enemies 30m (8s). Bal: 20s CD, 20 energy, static (no move), TDM intel.
+	•	Shield Drone (L): Orbit block 50% projectiles. Bal: 60s CD, 80 energy, 2 min dur, Aliens pierce.
+	•	Gas Drone (E): Poison cloud (10 dmg/s). Bal: 30s CD, 45 energy, wind drift, countered by masks.
+	•	Overclock Chip (R): Weapon +30% fire rate (10s). Bal: 25s CD, 40 energy, overheat jam 5s after.
+	•	Exec Shades (R): +15% acc vs moving. *Bal: Equip, -low light, Vehicles dogfights.
+Aliens (Horde Offense: +Regen, -Predictable)
+	•	Mind Probe (E): Control foe 8s (suicide risk). Bal: 45s CD, 60 energy, 15m range, break on dmg>30.
+	•	Shield Pod (R): Bubble 50 HP block (team 10s). Bal: 25s CD, 40 energy, immobile inside, TDM holds.
+	•	Spawn Larva (L): Summon 2 minions (40 HP ea). Bal: 70s CD, 90 energy, Zombie frenzy, slow spawn.
+	•	Acid Vial (C): Throw melt armor (25 dmg + slow). Bal: Stack x4, 12s CD, 20m, splash self.
+	•	Xen Spike (R): Lifesteal melee (30 dmg). Bal: 10s CD, regen 50%, close only, Crim counters.
+	•	Warp Dash (E): Teleport 15m forward. Bal: 20s CD, 35 energy, dizzy 2s post, BR gaps.
+	•	Bio Swarm (R): Locusts dmg/slow (15/s, 10s). Bal: Deploy 30 energy, Globalist EMP kills.
+	•	Regen Gland (C): +10 HP/s (12s). Bal: 25s CD, 25 energy, halved if burning.
+	•	Plasma Burst (E): Cone 40 dmg pierce. Bal: 18s CD, 45 energy, 12m, recoil knockback.
+	•	Hive Mask (R): +20% swarm resist/dmg. *Bal: Equip, -vision blur, Zombie mode.
+Implementation & Balance Tips (Steamworks/Source 2013): 17
+	•	Hooks: CBaseCombatWeapon::CanEquip() faction check; Think() for CDs/energy (ConVar “cw_balance_energy_max 100”).
+	•	Testing: PlayTest TDM (winrate 48-52%), BR survival +5%, Vehicles K/D 1:1. Nerf via patches (e.g., CD+10%).
+	•	Economy: C/R=Gun Store (cash), E/L=Auction (Context ID 1004). Drops scale w/ kills (1-3/rnd).
+	•	Prioritize: 2/faction for vNext (e.g., Breaching, IED). Synergize w/ HL2/CSS + flamethrower. 1 
+Boosts replayability, fair chaos! 🚔💥🏢🦠
