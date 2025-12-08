@@ -1,0 +1,37 @@
+Faction-Specific Inventory Items for CrimeWars (Source SDK 2013 MP Mod) 59 60
+These ideas build on the four factions (Cops, Criminals, Corporationists/Globalists, Aliens) and ongoing Steam Inventory Service setup (ItemDefs, Context IDs for NPC shops like Gun Store/Bank/Auction House). Items are faction-locked (equip only via team/gamemode checks, e.g., GetTeamNumber() == TEAM_COPS), but tradeable cross-faction for economy depth. Inspired by Battlefield Hardline’s split loadouts (blunt melees for Cops, sharp for Criminals) to balance TDM/BR/Zombie/Vehicles modes. 61 64
+Rarity tiers: Common (ammo/throwables), Rare (attachments/armor), Legendary (specials). Stack consumables; cosmetics via Steam hats/helmets expansion.
+Cops (Law Enforcement: Defensive, Non-Lethal Focus)
+Blunt force, crowd control for TDM rounds/prison maps.
+	•	Weapons/Attachments: Taser Pistol (stuns 5s, non-lethal takedown), Beanbag Shotgun Ammo (+knockback, no kill in Zombie mode), Riot Shield Upgrade (blocks projectiles + bash).
+	•	Melee/Throwables: Police Baton (blunt takedown, interrogate reveal enemy mini-map), Zip-Tie Grenade (ties enemies 10s for cuff/arrest).
+	•	Armor/Consumables: Riot Gear Vest (+75% explosive resist), Donut Medkit (slow regen + speed buff, stack x2).
+	•	Cosmetics: Badge Cap (glowing police emblem), SWAT Vest Patches (customizable ranks).
+	•	Utility/Vehicle: K9 Drone Summon (tracks enemies 30s), Spike Strip Kit (pops Criminal/Alien tires).
+Criminals (Street Gangs: Aggressive, Hit-and-Run)
+Sharp blades, fire/explosives for BR escapes/heists.
+	•	Weapons/Attachments: Sawed-Off DB Shotgun Skin (faster reload), Drug-Laced SMG Rounds (slows enemies + self-heal steal).
+	•	Melee/Throwables: Switchblade (backstab one-hit), Molotov+ (sticky fire pools), Pipe Bomb (high splash).
+	•	Armor/Consumables: Leather Jacket (+melee resist, bleed effect on attackers), Adrenaline Vial (double speed 8s, overdose risk).
+	•	Cosmetics: Gang Tattoos (animated ink glow), Bandana Mask (gang colors: red/blue).
+	•	Utility/Vehicle: Lockpick Kit (hack doors/vehicles 5s), Nitro Canister (buggy speed burst + ram damage).
+Corporationists/Globalists (Elite Corp: Tech/Control Focus)
+Drones, hacks for Vehicles/Zombie containment.
+	•	Weapons/Attachments: Corporate SMG (silenced + auto-aim assist), EMP Rounds (disables Alien shields/vehicles).
+	•	Melee/Throwables: Stun Baton (hack enemy HUD 10s), Gas Canister (blinds + DoT).
+	•	Armor/Consumables: Hazmat Suit (+bio/zombie resist, team-wide scan), Nanobot Injector (self-revive once).
+	•	Cosmetics: Top Hat (gold circuits), Suit Tie (holographic logo).
+	•	Utility/Vehicle: Hacking Drone (EMP pulse on deploy), Armor Plating (tank +20% health).
+Aliens (Invaders: Energy/Regen Focus)
+Plasma, summons for Zombie Apocalypse chaos.
+	•	Weapons/Attachments: Plasma Rifle (pierce + burn), Bio-Toxin AR Ammo (zombie conversion on kill).
+	•	Melee/Throwables: Claw Gauntlet (lifesteal slash), Acid Spit Grenade (melts armor).
+	•	Armor/Consumables: Exosuit (+regen aura for allies), Serum Vial (temp zombie summon ally).
+	•	Cosmetics: Visor Helmet (glowing xen eyes), Tentacle Wraps (writhing animation).
+	•	Utility/Vehicle: Teleport Beacon (short-range warp), Anti-Gravity Booster (vehicle hover/jump).
+Implementation Tips (Steamworks Ready):
+	•	Locking: if (pPlayer->GetTeamNumber() != TEAM_COPS) return; in equip hooks.
+	•	Trading: Full Steam support (AddItem/TransferItem); Auction House NPC sells rares (Context ID 1003). 59 
+	•	Balance: Cops excel defense (e.g., +shield in TDM), Criminals mobility (BR), Globalists utility (Vehicles), Aliens offense (Zombie). Test faction swaps in PlayTest 2025.
+	•	Total: 40 items (10/faction) – Prioritize 4 per faction (e.g., baton, molotov, EMP, plasma) for next alpha. Integrate with existing HL2/CSS weapons + flamethrower.
+Enhances urban zombie chaos, faction identity, and trading economy! 🚔🔫🏢👽
