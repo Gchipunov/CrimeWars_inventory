@@ -1,0 +1,47 @@
+CrimeWars Vehicle Attachments: Concise Stats (40 Total)
+Format: Name (Rarity): Slot | Spd% Arm% Hndl% Dmg% Rng m Bal Notes Base: Buggy(80kph/200HP/1.0hndl), Tank(50kph/500HP/0.8hndl). TTK:5-10s. Slots:2-4/veh (engine/armor/weap/util). Swap pitstop 10s. Faction lock. Syn: Veh/TDM/BR.
+Cops (Pursuit: +Arm/-Spd)
+	•	Spike Deploy (C): Util | 0 +10 0 0 15 | Tire pop BR chase
+	•	Riot Plating (R): Armor | -5 +25 0 0 0 | Block rds TDM
+	•	Siren Boost (R): Engine | +10 0 -5 +10ram 0 | Alert foes Veh
+	•	Pursuit Tires (C): Tires | 0 +15 +10 0 0 | Grip wet -flip
+	•	K9 Launcher (E): Weap | 0 0 0 25bite 20 | Track dmg Zmb
+	•	Barricade Ram (E): Front | -8 +20 +5 +30 5 | Stun push
+	•	Flash Pods (R): Util | 0 +5 0 0 25 | Blind cone BR
+	•	Ext Fuel (C): Tank | +15dur 0 0 0 0 | +2min -expl
+	•	Shield Dome (L): Armor | -10 +40 0 +15blk 10 | Proj def
+	•	Radar Lock (E): Sensor | 0 0 +15 0 50 | Ping speed
+Criminals (HitRun: +Spd/-Arm)
+	•	Nitro Kit (R): Engine | +40burst 0 -15 0 0 | 5s cd ovht
+	•	Ram Bumper (C): Front | 0 -10 0 +35 8 | Bleed splsh
+	•	Smoke Rear (R): Util | +20esc 0 0 0 12 | Blind trail BR
+	•	Slick Tires (C): Tires | +25 0 +20 -grip 0 | Drift fliprisk
+	•	Molotov Turret (E): Weap | 0 0 -10 30fr 18 | Ign pools
+	•	Chaff Drop (E): Util | +15 0 0 0 0 | Jam radar 10s
+	•	Overdrive Gear (R): Engine | +30 0 -20 +10 0 | 15s jam aft
+	•	Spike Shield (R): Armor | 0 +18 0 +20pop 10 | Counter tires
+	•	Bootleg Boost (L): Engine | +50spin 0 +25 0 0 | 180turn TDM
+	•	Hijack Hook (E): Util | 0 0 0 0 30 | Steal ctrl 8s
+Globalists (Tech: +Rng/-Hndl)
+	•	EMP Cannon (E): Weap | 0 +15 0 40emp 40 | Veh/Ali stun
+	•	Hover Jets (R): Engine | +10air 0 +15 0 0 | Jump ramp
+	•	Repair Drone (C): Util | 0 +30hp 0 0 15 | Ally/veh heal
+	•	Holo Jammer (R): Sensor | 0 0 +20 0 35 | Fake blips BR
+	•	Laser Turret (E): Weap | -5 0 0 25pierce 60 | Auto track
+	•	Nano Plates (E): Armor | 0 +25reg 0 0 0 | 5hp/s TDM
+	•	Hack Beacon (L): Util | 0 +20 0 0 50 | Ctrl foe 12s
+	•	Thruster Pods (R): Engine | +18 0 +10 0 0 | Strafe air
+	•	Shield Gen (R): Armor | -8 +35 0 +20blk 20 | Dome pulse
+	•	Scan Array (C): Sensor | 0 0 +25 0 80 | Wallhck foes
+Aliens (Horde: +Reg/-Spd)
+	•	Plasma Vent (E): Weap | 0 +10 0 35pierce 25 | Melt armor
+	•	AntiGrav Lift (R): Engine | +5hover +15 0 0 0 | Float jump
+	•	Swarm Pods (R): Util | 0 0 -10 20swrm 30 | Minion dmg
+	•	Regen Hull (C): Armor | 0 +20reg 0 0 0 | 8hp/s burn-
+	•	Acid Sprayer (E): Weap | -10 +5 0 28melt 15 | Slow splsh
+	•	Warp Drive (E): Engine | +35tp 0 -25 0 40 | Dash cd20s
+	•	Hive Shield (L): Armor | -15 +45 0 +25blk 15 | Regen aura
+	•	Bio Thrusters (R): Engine | +12 0 +8 +15ram 0 | Tox trail
+	•	Mind Link (E): Sensor | 0 0 +30 0 60 | Ctrl minions
+	•	Burst Wings (R): Engine | +25burst 0 -20 0 0 | Glide dizzy
+Bal Tips: ConVar cw_veh_slots 4 / cw_pit_cd 10. Test: K/D1:1, Win48-52%, Chase surv+10%. Drops: E/L kills/AH. Steam: DefIndex/faction. Prior: 1/faction (Spike/Nitro/EMP/Plasma). Veh mayhem! 🚗🚔💨🛸
