@@ -1,0 +1,44 @@
+Suggested Inventory Items for CrimeWars (Source SDK 2013 MP Mod) 72 71 55
+These suggestions expand on the existing HL2 weapons, custom flamethrower, planned CSS weapons, hats/helmets, and Steam Inventory Service integration (e.g., tradeable cosmetics, attachments for auction house/NPC shops like Gun Store/Bank). Items are themed around factions (Cops, Criminals, Globalists/Aliens), support game modes (TDM, BR, Zombie Apocalypse, Vehicles), and enable trading/exchanging via Steamworks APIs (AddItem, TransferItem). Grouped by category for easy implementation in ItemDefs. 72 73
+Weapon Skins & Attachments (Tradeable cosmetics/upgrades for 100+ weapons; apply via Steam Context IDs)
+	•	Silenced 9mm Skin (Criminal faction: +stealth in dark maps)
+	•	Gold-Plated AK-47 (Gangster Criminal: cosmetic glow)
+	•	Police Riot Shield Attachment (Cops: blocks projectiles in TDM)
+	•	Flamethrower Fuel Canister (Globalists: extends range/burn time) 55 
+	•	Bio-Toxin Rounds (Aliens: poison effect for Zombie mode)
+	•	Laser Sight for SMG (Universal: improves accuracy in Vehicles mode)
+Melee & Throwables (Consumables/single-use; stackable in player/NPC inventories)
+	•	Brass Knuckles (Criminals: high-damage close-quarters)
+	•	Switchblade Knife (Criminal: quick stab animation)
+	•	Molotov Cocktail (Criminals: area denial in BR)
+	•	Flashbang Grenade (Cops: blinds enemies temporarily)
+	•	Smoke Grenade (Globalists: obscures vision for escapes)
+Armor & Consumables (Health/energy buffs; equippable slots)
+	•	Kevlar Vest (Cops: +50% bullet resistance)
+	•	Adrenaline Syringe (Criminals: speed boost for 10s)
+	•	Medkit Pack (Universal: heals 50 HP, stack x3)
+	•	Alien Exosuit Armor (Aliens: regen in Zombie Apocalypse)
+Cosmetics (Hats/Helmets/Clothing) (Steam tradeable; planned feature expansion)
+	•	Backward Ballcap (Criminals: red/blue gang colors)
+	•	SWAT Riot Helmet (Cops: faction emblem)
+	•	Corporate Top Hat (Globalists: gold trim)
+	•	Alien Visor Mask (Aliens: glowing eyes)
+	•	Gold Chain Necklace (Universal: dangling animation)
+	•	Bandana Headwrap (Criminals: customizable patterns)
+	•	Aviator Sunglasses (Globalists: reflective lenses)
+Vehicle & Utility Items (Attach to buggies/tanks; NPC-sellable in Gun Store)
+	•	Spike Strip Deployer (Cops: pops tires in Vehicles mode)
+	•	Nitro Boost Kit (Criminals: +speed burst)
+	•	Armor Plating Sheets (Globalists: +tank health)
+	•	Lockpick Toolset (Criminals: unlocks doors/vehicles)
+	•	Hacking Drone (Globalists: EMP disables enemy vehicles)
+Special/Rare Items (Mission rewards, auction house exclusives; level-locked)
+	•	Get Out of Jail Free Card (Evades jail in prison maps)
+	•	Cash Bundle (Currency: trade for items at Bank NPC)
+	•	Zombie Serum Vial (Aliens: temporary zombie ally summon)
+Implementation Tips:
+	•	Steam Inventory: Use unique Context IDs (e.g., server+character+container) for NPC trades. Enable InventoryService in Steamworks dashboard. 72 
+	•	Balance: Rarity tiers (Common: ammo; Rare: cosmetics; Legendary: attachments). Stack limits for consumables.
+	•	Faction Lock: Restrict via team checks (e.g., Cops can’t equip Criminal skins).
+	•	Total: 28 items – Start with 10 high-priority (e.g., vests, grenades) for next PlayTest Release. Test in pre-inventory builds via editoutload. 73 
+This list fits the urban chaos theme, enhances multiplayer depth, and leverages your Steamworks progress (e.g., ItemDefs, banks). Prioritize based on faction balance! 🚀
