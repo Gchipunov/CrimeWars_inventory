@@ -1,0 +1,87 @@
+CrimeWars NPC_Citizen AI Integration via Curl (Source SDK 2013 MP) 15 16 0 9 13
+Enhances NPC_Citizen (e.g., Cops/Criminals as citizens) with AI API calls for dynamic behavior. Uses libcurl (add to VPC/project: link curl.lib, include ). Queries Grok API (xAI, POST /v1/chat/completions, model “grok-beta”) or alternatives (Gemini: ai.google.dev/api/gemini/v1, Hugging Face: api-inference.huggingface.co/models/gpt2). API key via env (e.g., SetEnvironmentVariable). Triggers in Think()/SelectSchedule for decisions, SpeakTL for dialogue. Squad: Use AI_SquadManager, ai_relationship for teams (faction-lock). MMO: Server-side persistence (e.g., MySQL via curl), world gen via procedural maps.
+Setup: Add libcurl to src/game/server/GameDLL.vpc. Include in npc_citizen.cpp/h.
+// npc_citizen.h additions
+#include 
+#include "ai_squad.h"  // For squad system
+
+class CNPC_Citizen : public CAI_BaseNPC {
+    // ...
+    CAI_Squad* m_pSquad;  // Squad ptr
+    string_t m_strAPIKey;  // API key (load from cfg)
+    void QueryAI(const char* prompt, std::string& response);  // Curl func
+    int SelectAISchedule();  // AI-decided schedule
+    void DynamicSpeak(const char* playerInput);  // Dialogue
+};
+// npc_citizen.cpp: Curl callback (static)
+static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
+    ((std::string*)userp)->append((char*)contents, size * nmemb);
+    return size * nmemb;
+}
+
+// QueryAI: POST to Grok API (alt: Gemini "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=API_KEY")
+void CNPC_Citizen::QueryAI(const char* prompt, std::string& response) {
+    CURL* curl = curl_easy_init();
+    if (curl) {
+        std::string url = "https://api.x.ai/v1/chat/completions";  // Grok
+        std::string body = "{\"model\": \"grok-beta\", \"messages\": [{\"role\": \"user\", \"content\": \"" + std::string(prompt) + "\"}]}";
+        struct curl_slist* headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+        headers = curl_slist_append(headers, ("Authorization: Bearer " + std::string(m_strAPIKey)).c_str());
+
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, body.c_str());
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
+
+        CURLcode res = curl_easy_perform(curl);
+        if (res != CURLE_OK) { Warning("Curl failed: %s\n", curl_easy_strerror(res)); }
+
+        curl_slist_free_all(headers);
+        curl_easy_cleanup(curl);
+    }
+}
+Dynamic Interactions: In SpeakTL/HandleAnimEvent, query AI for responses.
+void CNPC_Citizen::DynamicSpeak(const char* playerInput) {
+    std::string prompt = "As a " + GetFaction() + " NPC in urban chaos MMO: respond to player: " + std::string(playerInput);
+    std::string resp;
+    QueryAI(prompt.c_str(), resp);
+    // Parse JSON resp (use nlohmann/json or manual): e.g., choices[0].message.content
+    size_t pos = resp.find("\"content\":\"");
+    if (pos != std::string::npos) {
+        std::string aiText = resp.substr(pos + 11, resp.find("\"", pos + 11) - pos - 11);
+        Speak(aiText.c_str());  // Or EmitSound/Subtitle
+    }
+}
+Team Squad System: Init in Spawn(), use for MMO groups (e.g., 4-8 NPCs/faction).
+void CNPC_Citizen::Spawn() {
+    BaseClass::Spawn();
+    m_strAPIKey = getenv("GROK_API_KEY");  // Or cfg load
+    m_pSquad = g_AI_SquadManager.FindCreateSquad(MAKE_STRING("FactionSquad_" + GetTeamNumber()));
+    m_pSquad->AddToSquad(this);
+    // MMO: Curl to server DB for persistent squad (e.g., POST squad state)
+}
+
+int CNPC_Citizen::SelectSchedule() {
+    if (m_pSquad && m_pSquad->NumMembers() > 1) {
+        std::string prompt = "Squad decision: " + GetSquadState() + " in MMO world. Action? (e.g., patrol/attack/flank)";
+        std::string resp;
+        QueryAI(prompt.c_str(), resp);
+        // Parse to SCHED_ (e.g., if "attack" return SCHED_COMBAT_FACE)
+        if (resp.find("attack") != std::string::npos) return SCHED_COMBAT_FACE;
+    }
+    return BaseClass::SelectSchedule();
+}
+MMO World: Procedural via nav_edit, curl to external server for world events.
+// In Think(): Rare query for world events
+void CNPC_Citizen::Think() {
+    BaseClass::Think();
+    if (RandomInt(0, 1000) < 10) {  // ~1/min
+        std::string prompt = "MMO event in CrimeWars: generate dynamic quest for faction " + GetTeamNumber();
+        std::string resp;
+        QueryAI(prompt.c_str(), resp);
+        // Apply: e.g., SetGoal(resp-based path)
+    }
+}
+Bal/Impl Tips: Rate limit API (ConVar cw_ai_cd 60s). Faction-lock prompts (Cops: “lawful”). Test MP (fix AI via ). Alt APIs: Hugging Face (url=“https://api-inference.huggingface.co/models/gpt2”, body={“inputs”:prompt}). Squad RPS: Cops hold, Crim flank. Total: AI calls ~5/min/NPC. Integrate w/ items/vehicles for prompts (e.g., “use Nitro?”). PlayTest 2026 ready! 🚀👥🗺️
