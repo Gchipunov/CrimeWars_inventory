@@ -1,0 +1,47 @@
+CrimeWars Weapon Attachments: Concise Stats (40 Total)
+Format: Name (Rarity): Type | Acc% Dmg% RoF% Rec% Rng m Bal Notes Base WP: 9mm(P90/AK). TTK:2-5s. Att: 1/slot (scope/grip/etc). Swap 5s CD. Faction lock. Syn: HL2/CSS + Flame.
+Cops (Control: +Acc/-RoF)
+	•	Riot Sight (C): Scope | +20 0 0 +10 -2 | TDM hold
+	•	Beanbag Tube (R): Underbar | 0 +15 -10 0 0 | NonLeth Zmb
+	•	Stab Grip (R): Foregrip | +15 +5 -5 +20 0 | Spray ctrl
+	•	Flash Hider (C): Muzzle | +10 0 0 +25 0 | Blnd foe BR
+	•	Taser Bayo (E): Melee mod | 0 +30melee 0 0 0 | Stun5s Veh
+	•	Shield Mount (E): Side att | +25shld 0 0 +30 -1 | Block50%
+	•	Ext Mag (R): Mag | 0 0 0 0 0 | +50rnds -swp
+	•	Laser Baton (E): Sight | +30 0 0 0 +3 | Reveal dark
+	•	Breath Kit (L): Stock | +18 0 +5 +15 -1 | Mov acc
+	•	Cuff Rail (R): Pic rail | 0 0 0 0 0 | +Bind chnc
+Criminals (Aggro: +Dmg/-Acc)
+	•	Sawed Bbl (C): Barrel | -10 +25 +10 0 -3 | CQC hip
+	•	Drug Tip (R): Muzzle | 0 +20slow 0 +5 0 | DoT steal
+	•	Gang Grip (R): Grip | +5 +15 -10 +10 0 | Rec dmg
+	•	Ricochet Pad (C): Stock | 0 +10bounce 0 0 +1 | Wall BR
+	•	Nitro Vent (E): Muzzle | 0 +18 0 -15 +2 | Ovht risk
+	•	Shiv Scope (E): Scope | +12 +20melee 0 0 -1 | Backstb
+	•	Ext Drum (R): Mag | -5 0 +15 0 0 | 100rnds
+	•	Flame Tip (L): Barrel | 0 +25fr 0 -20 -2 | Ign splsh
+	•	Wire Sight (R): Sight | +8trap 0 0 0 0 | Trip link
+	•	Adren Rail (E): Rail | 0 +12spd +20 0 +1 | Ovrd10s
+Globalists (Tech: +Rng/-Dmg)
+	•	Holo Scope (R): Scope | +25 0 0 +5 +5 | Autoaim
+	•	EMP Muzzle (E): Muzzle | 0 +10EMP 0 0 +2 | Veh/Ali
+	•	Nano Grip (C): Grip | +18 0 +5 +15 0 | Rep+self
+	•	Silencer (R): Barrel | +15 -5 0 +20 +1 | Stealth BR
+	•	Data Stock (E): Stock | +22hack 0 0 +10 +4 | Obj ctrl
+	•	Pulse Rail (L): Rail | +30scan 0 0 0 +6 | Wallhk
+	•	OC Mag (R): Mag | 0 0 +25 -10 0 | Jam5%
+	•	Shield Lens (E): Scope | +20blk50 0 0 +8 +3 | Proj def
+	•	Overclk Tip (R): Muzzle | 0 +5 +30 -15 +2 | Heat5s
+	•	Exec Sight (C): Sight | +16mov 0 0 0 +3 | Trk tgt
+Aliens (Horde: +Pierce/-Rec)
+	•	Plasma Lens (E): Scope | +10 +20pierce 0 -10 +4 | Zmb thru
+	•	Bio Tip (R): Muzzle | 0 +15tox 0 0 +1 | Conv kill
+	•	Claw Grip (R): Grip | +5 +25melee 0 +5 0 | LS slash
+	•	Warp Stock (E): Stock | +12tp 0 +10 -20 +3 | Dash acc
+	•	Acid Tube (C): Underbar | 0 +18melt 0 0 -1 | Armr brk
+	•	Hive Mag (L): Mag | -5 +10swrm +20 0 +2 | Minion+
+	•	Regen Vent (R): Muzzle | +15reg 0 0 +10 0 | HP/s
+	•	Mind Rail (E): Rail | +20ctrl 0 0 0 +2 | Foe hack
+	•	Spike Sight (R): Sight | +8LS 0 0 -5 0 | Melee rng
+	•	Burst Pod (E): Barrel | 0 +30cone 0 -25 +1 | AoE pier
+Bal Tips: ConVar cw_att_slots 3 / cw_swap_cd 5. Test: DPS +15%max, Acc48-52%. Drops: R/E kills. Steam: DefIndex/faction. Prior: 1/faction (Riot/Drug/Holo/Plasma). Mod chaos! 🔫🚔💥👽
