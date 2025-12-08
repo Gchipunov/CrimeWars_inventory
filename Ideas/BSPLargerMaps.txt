@@ -1,0 +1,28 @@
+Modifying Source SDK 2013 to Strata Source for Larger Maps/Open World 41 30
+Strata Source is a community-forked branch of the Source engine (from CS:GO/Portal 2), with modern upgrades like 64-bit support, PBR shaders, Steam Audio, and crucially, expanded map limits to 128k x 128k x 128k units via BSP v25 (vs. standard Source’s ~32k limit, which causes jitter/precision issues in large areas). 41 31 This directly enables bigger Hammer maps—ideal for GTA-style open worlds in your CrimeWars mod (urban chaos with vehicles/factions). Strata maintains backwards compatibility with Source 2013 BSP v19-21/models, easing migration. 41
+Step-by-Step Migration to Strata Source
+	1	Acquire Strata Components: No full public SDK (requires Valve license for proprietary parts), but open-source elements are on GitHub (e.g., sdk-launcher, sdk_tools). 40 2 5 8 Clone repos like https://github.com/StrataSource/sdk-launcher and https://github.com/StrataSource/sdk_tools. For full access, base on licensed games like Momentum Mod or Portal 2: Community Edition (free on Steam), which use Strata. 40 41 If unlicensed, fork Source 2013 and manually integrate Strata’s open features (e.g., BSP v25 patches from GitHub issues/forks).
+	2	Update Project Setup:
+	◦	Replace VPC with CMake (Strata’s build system). 41 In your mod’s root, add CMakeLists.txt mirroring Strata examples.
+	◦	Compile 64-bit only (drop 32-bit/Mac for perf).
+	◦	Integrate Strata Hammer (modified Hammer 4.x with Qt UI) for editing: Download from sdk-launcher, replace your Hammer.exe. 4 41 Test larger grids (128k units) without compile errors.
+	3	Enable Larger Maps:
+	◦	In Hammer, set BSP version to v25 in compile options (vbsp.exe updates from Strata). 30 41 
+	◦	For GTA-style open world: Use bigger maps for seamless areas (e.g., 128k urban sprawl). Add custom streaming: Hook into engine’s vis/portal system (e.g., modify CEngineBSPTree for dynamic loading). Or split into “sectors” with teleports/load triggers (less ideal, but Source-native). 34 38 Integrate procedural gen via scripts (Angelscript/VScript in Strata). 41 
+	4	Test & Balance: Recompile your mod (mp_game.dll/server.dll). Test in large maps—fix physics jitter by scaling entities/units if needed. For open world, add vehicle optimizations (e.g., LODs via Strata’s PBR).
+Peer-to-Peer Hosting with Steam Sockets (Avoid Server Costs)
+Source 2013 is client-server (dedicated/listen servers), not native P2P. 12 To shift to P2P: Integrate SteamNetworkingSockets (Steam API for low-latency P2P, used in TF2/CS:GO updates). 20 26 This avoids dedicated server costs (e.g., AWS/GCP) by routing via Steam Datagram Relay (SDR) for NAT punchthrough/firewalls.
+Implementation Steps
+	1	Add SteamNetworkingSockets:
+	◦	Include Steam SDK (download from partner.steamgames.com). 26 In game/server/netmessages.cpp, replace UDP/TCP with ISteamNetworkingSockets (CreateListenSocketP2P/CreateP2PSocket).
+	◦	Hook into CNetChan: Override SendNetchanPacket/ProcessPacket with Steam’s SendMessageToConnection/ReceiveMessagesOnConnection. 20 
+	◦	For lobby: Use ISteamMatchmaking for P2P sessions (CreateLobby/JoinLobby).
+	2	P2P Architecture:
+	◦	Use hybrid: One player as “host” (listen-like), others connect P2P via Steam IDs. Sync state via reliable messages (e.g., entity deltas). 10 18 
+	◦	Host migration: On disconnect, vote/elect new host via Steam callbacks (OnP2PSessionConnectFail).
+	◦	For MMO elements (persistent world): Use client-side prediction + server auth on host, but store data in Steam Cloud/MySQL (query via curl, as in prior persistence). 17 
+	3	Hosting/Distribution:
+	◦	Mod Release: Upload to Steam Workshop (via steamcmd) or GitHub. Players install via SDK Base 2013 + your DLLs. 14 23 
+	◦	P2P Games: In-game menu: “Host P2P” (sv_lan 0, +p2p like Garry’s Mod). 13 Friends join via Steam overlay/invites. No central server—Steam handles matchmaking/relays (free tier limits, but sufficient for <100 players).
+	◦	Scalability: P2P suits 2-16 players (e.g., co-op heists). For larger (MMO), fallback to listen servers; true P2P struggles with sync/cheats.
+Caveats: P2P increases cheat risk (no authoritative server)—add VAC/anti-cheat. Test netcode heavily (lag compensation via Steam’s APIs). For open world, optimize bandwidth (e.g., relevance checks). Total effort: 1-3 months for experienced dev. Start with Strata migration, then P2P! 🚀
