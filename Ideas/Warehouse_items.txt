@@ -1,0 +1,24 @@
+1. The Delivery/Sorting Tote 
+(The Large Fabric Bag)These are the heavy-duty, 
+multi-colored (often blue, green, or yellow) bags seen in the back of Amazon Prime vans.
+Dimensions: Approximately 28" L x 23" W x 20" H.Capacity: Roughly 4 to 5 cubic feet.
+Weight Limit: Typically capped at 50 lbs for safety, 
+though they are designed to be quite rugged.2. 
+
+The Yellow Warehouse Bin (The Plastic "Tote")
+Inside the fulfillment centers, 
+items are stored and moved in rigid yellow plastic bins.
+Dimensions: Approximately 23" L x 16" W x 11" H.
+Usage: These are used on conveyor belts and by "pickers" to collect items for orders.
+3. Individual Product Poly Bags
+
+If you are asking about the clear plastic bags used to wrap products before they go into a box or mailer:Dimensions: These vary wildly based on the product.
+Requirements: Amazon requires these to be at least 1.5 mil thick. 
+If the bag has an opening of 5 inches or more (measured flat), it must have a printed suffocation warning.Summary TableBag/Bin TypeDimensions (L x W x H)MaterialDelivery Tote28" x 23" x 20"Reinforced Fabric/PlasticWarehouse Bin23" x 16" x 11"Rigid Yellow PlasticEmployee Clear Bag10" x 10" (Site specific)Clear Plastic/Vinyl
+
+
+
+Prompt: "what the deminsions of a amazon warehouse bag?"
+
+Depending on where you are in the Amazon ecosystem (warehouse, delivery van, or receiving a package), the term "bag" usually refers to one of three things.The most common "Amazon warehouse bag" is the large, foldable fabric tote used by drivers and warehouse sorters.1. The Delivery/Sorting Tote (The Large Fabric Bag)These are the heavy-duty, multi-colored (often blue, green, or yellow) bags seen in the back of Amazon Prime vans.Dimensions: Approximately 28" L x 23" W x 20" H.Capacity: Roughly 4 to 5 cubic feet.Weight Limit: Typically capped at 50 lbs for safety, though they are designed to be quite rugged.2. The Yellow Warehouse Bin (The Plastic "Tote")Inside the fulfillment centers, items are stored and moved in rigid yellow plastic bins.Dimensions: Approximately 23" L x 16" W x 11" H.Usage: These are used on conveyor belts and by "pickers" to collect items for orders.3. Individual Product Poly BagsIf you are asking about the clear plastic bags used to wrap products before they go into a box or mailer:Dimensions: These vary wildly based on the product.Requirements: Amazon requires these to be at least 1.5 mil thick. If the bag has an opening of 5 inches or more (measured flat), it must have a printed suffocation warning.Summary TableBag/Bin TypeDimensions (L x W x H)MaterialDelivery Tote28" x 23" x 20"Reinforced Fabric/PlasticWarehouse Bin23" x 16" x 11"Rigid Yellow PlasticEmployee Clear Bag10" x 10" (Site specific)Clear Plastic/Vinyl
+
