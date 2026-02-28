@@ -1,0 +1,2 @@
+placeholder.txt
+cw_item_pouchbag.txt
