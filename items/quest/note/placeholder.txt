@@ -1,0 +1,4 @@
+placeholder.txt
+quest note/note
+notebook
+paper
