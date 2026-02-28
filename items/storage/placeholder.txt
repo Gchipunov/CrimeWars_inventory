@@ -1,0 +1,5 @@
+placeholder.txt
+cw_item_pouchbag
+--cw_item_suitcase// in props_junk?
+cw_item_backpack
+cw_item_sportsbag
